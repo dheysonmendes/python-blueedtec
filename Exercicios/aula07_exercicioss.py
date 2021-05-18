@@ -142,19 +142,97 @@
 # Exiba no console o custo total de uma viagem de 12 dias para 'Manaus' gastando R$ 800,00 
 # adicionais
 
-# def custo_hotel(noites):
+# def custo_hotel(noites):    
 #     noites = noites * 140
-#     print(f'O custo total do hotel foi {noites}')
+#     print(f'O custo total do hotel é R$ {noites},00')
+
+
+# def custo_aviao(cidade):
+#     if cidade == 'SAO PAULO':
+#         print('A passagem custa R$ 312,00. ')
+#     elif cidade == 'PORTO ALEGRE':
+#         print('A passagem para custa R$ 447,00. ')
+#     elif cidade == 'RECIFE':
+#         print('A passagem para custa R$ 831,00. ')
+#     elif cidade == 'MANAUS':
+#         print('A passagem custa R$ 986,00. ')
+#     else:
+#         print('Não temos passagems para essa cidade.')
+
+
+
+# def custo_carro(dias):
+#     dias1 = dias * 40.00
+#     if dias >= 7:
+#         dias1 = dias1 - 50.00
+#     elif 3 <= dias < 7:
+#         dias1 = dias1 - 20.00
+#     print(f'O valor do aluguel do carro é R${dias1}.')
+
+
+
+#4 - Agora com essas três funções criadas, declare uma função que receba a cidade e quantidade 
+# de dias e retorne o custo total da viagem.
+# - Reutilize as funções já criadas.
+# - Exiba o total da viagem chamando apenas a nova função declarada!
+# Gastos Extras
+
+def total(noites,cidade,dias):
+    a = noites
+    b = 0
+    c = 0
+    def custo_hotel(noites):
+        noites = noites * 140
+        print(f'O custo total do hotel é R$ {noites},00')
+        a = noites
+
+
+    def custo_aviao(cidade):
+        if cidade == 'SAO PAULO':
+            b = 312.00
+            print('A passagem custa R$ 312,00. ')
+        elif cidade == 'PORTO ALEGRE':
+            b = 447.00
+            print('A passagem para custa R$ 447,00. ')
+        elif cidade == 'RECIFE':
+            b = 831.00
+            print('A passagem para custa R$ 831,00. ')
+        elif cidade == 'MANAUS':
+            b = 986.00
+            print('A passagem custa R$ 986,00. ')
+        else:
+            print('Não temos passagems para essa cidade.')
+
+
+
+    def custo_carro(dias):
+        dias1 = dias * 40.00
+        if dias >= 7:
+            dias1 = dias1 - 50.00
+            c = dias1
+        elif 3 <= dias < 7:
+            dias1 = dias1 - 20.00
+        c = dias1
+        print(f'O valor do aluguel do carro é R$ {dias1}.')
+    
+    custo_hotel(noites)
+    custo_aviao(cidade)
+    custo_carro(dias)
+
+    
+
+
+
+noites = int(input('Digite o periodo hospedado em noites: '))
+cidade = str(input('Digite a cidade de destino: ').upper())
+dias = int(input('Digite o periodo de utilização do carro: '))
 
 
 
 
 
 
-
-
-
-
-
-
-noites = int(input('Digite o periodo hospedado: '))
+# custo_hotel(noites)
+# custo_aviao(cidade)
+# custo_carro(dias)
+total(noites,cidade,dias)
