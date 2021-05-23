@@ -24,7 +24,7 @@
 #         print('True.')
 
 
-# a = float(input('Digite o primeiro numero: '))
+a = float(input('Digite o primeiro numero: '))
 # b = float(input('Digite o segundo numero: '))
 
 # numeros(a,b,96)
